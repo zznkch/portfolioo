@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M224 256A128 128 0 1 0 224 0a128 128 0 0 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z'/%3E%3C/svg%3E">
+    <title>𝕫𝕒𝕜𝕒𝕣𝕚𝕒 🌺
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+        <defs>
+            <filter id="crayon" x="-10%" y="-10%" width="120%" height="120%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <filter id="crayon-light" x="-10%" y="-10%" width="120%" height="120%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+    <main class="mindmap" id="mindmap">
+        <div class="polaroid-3d" id="polaroid">
+            <div class="polaroid-inner">
+                <div class="polaroid-front">
+                    <div class="polaroid-paper">
+                        <img src="moi.png" alt="Photo de moi" />
+                        <span class="polaroid-caption">C'est moi !</span>
+                    </div>
+                </div>
+                <div class="polaroid-back">
+                    <div class="polaroid-paper">
+                        <p class="back-message"><i class="fa-regular fa-star"></i><br>Passionné de programmation et de création Web j'ai donc décidé d'en faire mon métier !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nodes-top">
+            <div class="node" data-target="formation">
+                <span class="node-border"></span>
+                <span class="node-content"><i class="fa-solid fa-graduation-cap"></i> Formation</span>
+            </div>
+            <div class="node" data-target="experience">
+                <span class="node-border"></span>
+                <span class="node-content"><i class="fa-solid fa-briefcase"></i> Expérience</span>
+            </div>
+        </div>
+        <div class="nodes-bottom">
+            <div class="node" data-target="competences">
+                <span class="node-border"></span>
+                <span class="node-content"><i class="fa-solid fa-medal"></i> Compétences</span>
+            </div>
+            <div class="node" data-target="contact">
+                <span class="node-border"></span>
+                <span class="node-content"><i class="fa-solid fa-address-card"></i> Contact</span>
+            </div>
+        </div>
+    </main>
+
+    <div class="flysheets-container" id="flysheetsContainer">
+        <div class="flysheet" id="sheet-formation">
+            <div class="flysheet-paper">
+                <button class="flysheet-close" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+                <h2><i class="fa-solid fa-graduation-cap"></i> Formation</h2>
+                <div class="detail-card"><span class="date">2025 – 2026</span><strong>Construction de parcours</strong><p>École de la deuxième chance (e2c), Forbach</p></div>
+                <div class="detail-card"><span class="date">2023 – 2025</span><strong>Baccalauréat Général</strong><p>Lycet Condorcet, Schœneck</p></div>
+                <div class="detail-card"><span class="date">2018 – 2022</span><strong>Brevet des collèges</strong><p>Collège Robert Schuman, Behren-lès-Forbach</p></div>
+            </div>
+        </div>
+
+        <div class="flysheet" id="sheet-experience">
+            <div class="flysheet-paper">
+                <button class="flysheet-close" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+                <h2><i class="fa-solid fa-briefcase"></i> Expérience</h2>
+                <div class="detail-card"><span class="date">2025 – 2026</span><strong>Freelance</strong><p>Création de sites vitrine pour entreprise et particulier</p></div>
+                <div class="detail-card"><span class="date">2018 – 2025</span><strong>Cordées de la réussite</strong><p>Tutorats, conférences et événements éducatifs pour encourager la réussite scolaire</p></div>
+                <div class="detail-card"><span class="date">2021 – 2022</span><strong>Stage de découverte</strong><p>Observation et participation à la gestion des stocks de véhicules d'occasion et contribution à l'organisation des ventes et démarches administratives</p></div>
+            </div>
+        </div>
+
+        <div class="flysheet" id="sheet-competences">
+            <div class="flysheet-paper">
+                <button class="flysheet-close" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+                <h2><i class="fa-solid fa-check-to-slot"></i> Compétences</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">TECHNIQUES</span><span class="skill-tag">PROGRAMMATION</span>
+                    <span class="skill-tag">GESTION DE PROJET</span><span class="skill-tag">COMMUNICATION</span>
+                    <span class="skill-tag">CRÉATIVITÉ</span><span class="skill-tag">DESIGN DIGITAL</span>
+                    <span class="skill-tag">ADAPTABILITÉ</span><span class="skill-tag">TRAVAIL EN ÉQUIPE</span>
+                    <span class="skill-tag">LEADERSHIP</span><span class="skill-tag">ANALYSE</span>
+                    <span class="skill-tag">ENTREPRENEURIAT</span><span class="skill-tag">FLEXIBLE</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flysheet" id="sheet-contact">
+            <div class="flysheet-paper">
+                <button class="flysheet-close" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+                <h2><i class="fa-solid fa-address-card"></i> Contact</h2>
+                <div class="contact-list">
+                    <a href="mailto:zakaria.codage@gmail.com" class="contact-item"><span><i class="fa-solid fa-envelope"></i></span> zakaria.codage@gmail.com</a>
+                    <a href="tel:+33658535771" class="contact-item"><span><i class="fa-solid fa-phone"></i></span> 06 58 53 57 71</a>
+                    <a href="https://snapchat.com/add/zznkch0" class="contact-item"><span><i class="fa-brands fa-snapchat"></i></span> zznkch0</a>
+                    <a href="https://instagram.com/zznkch" class="contact-item"><span><i class="fa-brands fa-instagram"></i></span> zznkch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
