@@ -8,9 +8,6 @@
 * {
     -webkit-tap-highlight-color: transparent;
 }
-*:active {
-    background-color: transparent !important;
-}
 
 :root {
     --ink: #1a1a1a;
